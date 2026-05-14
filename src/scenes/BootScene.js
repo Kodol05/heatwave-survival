@@ -7,14 +7,15 @@ export default class BootScene extends Phaser.Scene {
   }
 
   preload() {
-    this.load.spritesheet('player', '/assets/player_run.png', {
+    this.load.setPath(import.meta.env.BASE_URL + 'assets');
+    this.load.spritesheet('player', 'player_run.png', {
       frameWidth: 68, frameHeight: 68,
     });
-    this.load.image('home-bg', '/assets/home_bg.jpg');
-    this.load.image('title-bg', '/assets/title_bg.jpg');
-    this.load.image('mother', '/assets/mother.png');
-    this.load.audio('bgm', '/assets/bgm.mp3');
-    this.load.audio('bgm-errand', '/assets/errand_bgm.mp3');
+    this.load.image('home-bg', 'home_bg.jpg');
+    this.load.image('title-bg', 'title_bg.jpg');
+    this.load.image('mother', 'mother.png');
+    this.load.audio('bgm', 'bgm.mp3');
+    this.load.audio('bgm-errand', 'errand_bgm.mp3');
     makeAllPlaceholders(this);
   }
 
